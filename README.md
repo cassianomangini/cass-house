@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cass House - Sistema de Gerenciamento Residencial
 
-## Getting Started
+Sistema completo e moderno para gerenciamento de casa inteligente, desenvolvido com Next.js 15 e Supabase.
 
-First, run the development server:
+## 🚀 Stack Tecnológica (2025)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Frontend
+- **Next.js 15** - Framework React com App Router
+- **React 19** - Com Server Components nativos
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS v4** - Estilização moderna
+- **Lucide React** - Ícones
+
+### Backend & Database
+- **Supabase** - Backend-as-a-Service
+- **PostgreSQL** - Database relacional
+- **Row Level Security** - Segurança granular
+
+### Estado & Cache
+- **TanStack Query v5** - Cache e sincronização de dados
+- **Zustand** - Gerenciamento de estado leve
+
+### Desenvolvimento
+- **Biome** - Linting e formatação (substituto do ESLint + Prettier)
+- **Vitest** - Testes unitários e de integração
+- **TypeScript strict mode** - Máxima segurança de tipos
+
+## 🏗️ Estrutura do Projeto
+
+```
+src/
+├── app/                 # App Router (Next.js 15)
+│   ├── layout.tsx      # Layout principal
+│   └── page.tsx        # Página inicial
+├── components/         # Componentes reutilizáveis
+│   └── ui/            # Componentes de UI base
+├── hooks/             # Custom hooks
+│   └── use-auth.ts    # Hook de autenticação
+├── lib/               # Utilitários e configurações
+│   ├── supabase.ts    # Cliente Supabase
+│   ├── utils.ts       # Funções utilitárias
+│   └── query-provider.tsx # Provider do TanStack Query
+├── stores/            # Stores Zustand
+└── test/              # Configuração de testes
+    └── setup.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Scripts Disponíveis
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Desenvolvimento
+npm run dev          # Inicia servidor com Turbopack
+npm run build        # Build de produção
+npm run start        # Servidor de produção
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Qualidade de código
+npm run lint         # Verifica código com Biome
+npm run lint:fix     # Corrige automaticamente
+npm run format       # Formata código
 
-## Learn More
+# Testes
+npm run test         # Executa testes
+npm run test:ui      # Interface visual dos testes
+npm run type-check   # Verifica tipos TypeScript
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 Configuração
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone o repositório**
+```bash
+git clone <repo-url>
+cd cass-house
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Instale dependências**
+```bash
+npm install
+```
 
-## Deploy on Vercel
+3. **Configure variáveis de ambiente**
+```bash
+cp .env.example .env.local
+# Configure suas chaves do Supabase
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Inicie o desenvolvimento**
+```bash
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🏠 Funcionalidades Planejadas
+
+- [ ] **Controle de Iluminação** - Automação e controle de luzes
+- [ ] **Sistema de Segurança** - Alarmes, câmeras e controle de acesso
+- [ ] **Monitoramento de Energia** - Consumo e otimização
+- [ ] **Automação Residencial** - Cenários e rotinas personalizadas
+- [ ] **Interface Mobile** - PWA responsivo
+- [ ] **Dashboard Analytics** - Relatórios e métricas
+
+## 📦 Dependências Principais
+
+```json
+{
+  "dependencies": {
+    "next": "15.4.7",
+    "react": "19.1.0",
+    "@supabase/supabase-js": "^2.x",
+    "@tanstack/react-query": "^5.x",
+    "zustand": "^5.x",
+    "tailwindcss": "^4.x",
+    "lucide-react": "^0.x"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.x",
+    "vitest": "^2.x",
+    "typescript": "^5.x"
+  }
+}
+```
+
+## 🌟 Características Modernas
+
+- ⚡ **Turbopack** - Build e hot reload ultra-rápido
+- 🔒 **Type Safety** - TypeScript strict mode
+- 🎨 **Design System** - Componentes consistentes
+- 📱 **Mobile First** - Responsivo e PWA-ready
+- 🔄 **Real-time** - Sincronização em tempo real
+- 🛡️ **Security** - RLS e autenticação robusta
+
+## 📝 Padrões de Desenvolvimento
+
+- **Componentes**: Funcionais com hooks
+- **Estado**: Zustand para global, useState para local
+- **Dados**: TanStack Query para server state
+- **Estilo**: Tailwind com design tokens
+- **Testes**: Vitest + Testing Library
+- **Commits**: Conventional commits
+
+---
+
+Desenvolvido com ❤️ usando as tecnologias mais modernas de 2025.
